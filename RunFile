@@ -1,0 +1,21 @@
+package execute;
+import test.Amazon;
+import test.Double2;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class Execute {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		Amazon fg = new Amazon(driver);
+		fg.open();
+		fg.search("iphone");
+		Double2 hj = new Double2(driver);
+		hj.open1();
+		hj.search1("home decorator");
+		
+			
+
+	}
+
+}
