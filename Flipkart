@@ -1,0 +1,23 @@
+package test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Double2 {
+	WebDriver driver;
+	public Double2(WebDriver driver) {
+		this.driver=driver;
+	}
+	public void open1() throws InterruptedException {
+		driver.get("https://www.flipkart.com/");
+		
+	}
+	public void search1(String iphone) {
+		WebElement box1 = driver.findElement(By.xpath("//input[@placeholder='Search for Products, Brands and More']"));
+		box1.sendKeys(iphone);
+		driver.findElement(By.xpath("//button[@title='Search for Products, Brands and More']//*[name()='svg']")).click();
+		System.out.println("executed successfully");
+	}
+
+}
